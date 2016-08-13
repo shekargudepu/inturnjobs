@@ -1,0 +1,84 @@
+
+
+
+<h1>Create new Profile</h1>
+
+<%= form_for :profile do |f| %>
+
+
+
+<p>
+    <%= f.label :profilename %>
+    <%= f.text_field :title %>
+  </p>
+<strong>Contact Details</strong>
+<p>
+    <%= f.label :firstname %>
+    <%= f.text_field :title %>
+  </p>
+<p>
+    <%= f.label :lastname %>
+    <%= f.text_field :title %>
+  </p>
+
+<p>
+    <%= f.label :mobile_no%>
+    <%= f.phone_field :numerical %>
+  </p>
+<p>
+    <%= f.label :linked_in_url %>
+    <%= f.url_field :text %>
+  </p>
+<p>
+    <%= f.label :Current_location%>
+    <%= f.select :state, us_states %>
+  </p>
+
+
+<strong>Current Profession Details</strong>
+<p>
+    <%= f.label :total_work_experience %>
+    <%= f.select :experience, ['1','2','3','4','5','6','7','9','10','11','12'] %> years
+    <%= f.select :experience, ['1','2','3','4','5','6','7','8','9','10','11','12'] %> months
+</p>
+<p>
+  <%= f.label :Current_industry %>
+  <%= f.select :text, ['it industry','electrical engineering']%>
+ </p>
+
+<p>
+    <%= f.label :key_skills %>
+    <%= f.text_field :text %>
+  </p>
+<p>
+    <%= f.label :resume_headline%>
+    <%= f.text_field :text%>
+  </p>
+
+<strong>Education Details</strong>
+<p>
+  <%= f.label :Basic_Graduation %>
+  <%= f.select :text, ['it industry','electrical engineering']%>
+ </p>
+<p>
+  <%= f.label :PostGraduation %>
+  <%= f.select :text, ['it industry','electrical engineering']%>
+ </p>
+<p>
+  <%= f.label :Doctorate_PhD %>
+  <%= f.select :text, ['it industry','electrical engineering']%>
+ </p>
+<strong>Certification If Any</strong>
+<p>
+    <%= f.label :Certification1%>
+    <%= f.text_field :text%>
+  </p>
+<p>
+    <%= f.label :Certification2%>
+    <%= f.text_field :text%>
+  </p>
+<p>
+  <%= f.submit %>
+ </p>
+
+<% end %>
